@@ -1,0 +1,104 @@
+.mobile-header {
+	position: relative;
+	background: #000;
+	padding: 30px 0 30px;
+	margin-bottom: 50px;
+	color: #fff;
+
+	&_logoblock {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: space-between;
+		margin: auto;
+		text-align: center;
+		text-decoration: none;
+		margin-bottom: 30px;
+		.no-select;
+	}
+
+	&_logo {
+		text-transform: lowercase;
+		flex: 100% 1 0;
+		margin-bottom: 25px;
+
+		& img {
+			width: 79px;
+		}
+	}
+
+	&_headline {
+		font-size: 18px;
+		line-height: 18px;
+		user-select: none;
+		white-space: nowrap;
+		color: #fff;
+	}
+
+	&_menu {
+		display: inline-block;
+		margin-left: -15px;
+		color: #949494;
+		position: relative;
+		user-select: none;
+	}
+
+	&_arrow {
+		position: absolute;
+		right: -20px;
+		top: 3px;
+		transition: transform 1s ease;
+
+		&__up {
+			transform: scale(1, -1);
+		}
+	}
+
+	&_nav {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		list-style: none;
+		position: absolute;
+		z-index: -1;
+		user-select: none;
+		left: 0;
+		right: 0;
+		margin: auto;
+		background: #000;
+		top: calc(~"100vh - 100% + 40px");
+		opacity: 0;
+		transition: all 1s ease-out;
+
+		&__opened {
+			top: 100%;
+			opacity: 1;
+			height: auto;
+			z-index: 10;
+			transition: opacity 1s;
+		}
+	}
+
+	&_link {
+		position: relative;
+		font-size: 14px;
+		line-height: 14px;
+		background: #000;
+		color: #949494;
+		flex: 100% 1 0;
+		padding: 12px 0;
+		text-align: center;
+		font-weight: bold;
+		text-decoration: none;
+		.no-select;
+
+		&__active {
+			color: #fff;
+		}
+
+		&:active {
+			color: #fff;
+		}
+	}
+}
